@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Mostera';
+    src: url('/galerie/Typo/Mostera-Regular.woff') format('woff'),
+        url('/galerie/Typo/Mostera-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Staylista';
+    src: url('/galerie/Typo/Staylista-Regular.woff') format('woff'),
+        url('/galerie/Typo/Staylista-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: rgb(239, 248, 237);
+}
+
+header {
+    font-family: 'Staylista';
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    position: sticky;
+    border-bottom: 2px solid;
+    background: rgb(239, 248, 237);
+}
+
+nav li {
+    font-size: 1.25rem;
+    display: inline;
+}
+
+header a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding-right: 15px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.hello {
+    padding-top: 10%;
+    background-image: url('/galerie/Bannière.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+h1 {
+    font-family: 'Staylista';
+    margin: auto;
+    margin-bottom: 200px;
+    font-size: 11rem;
+    letter-spacing: 2rem;
+    border-right: 5px solid;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(15, end),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+main {
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    margin: auto;
+    padding-top: 50px;
+    color: white;
+}
+
+h2,
+.commentaires h2 {
+    font-family: 'Staylista';
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+section {
+    width: 98%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.head {
+    width: 55%;
+    background: blueviolet;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 150px;
+}
+
+#inspiTexte,
+#travauxTexte,#comment-section {
+    width: 65%;
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.img-travaux {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.travaux img {
+    height: 650px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+img {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 900px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    overflow: hidden;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 20px 50px 0;
+    margin: 0;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff2f94;
+}
+
+.commentaires {
+    margin-top: 50px;
+    padding-bottom: 20px;
+    margin: auto;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.comment-section {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+textarea {
+    width: 60%;
+    height: 100px;
+    border: 1px solid #7315df;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+label {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #7315df;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    background: #6f15d6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #390d6b;
+}
+
+.comments-list {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #eee;
+}
+
+.comment {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    border-left: #6f15d6 solid 10px;
+}
+
+
+footer {
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
